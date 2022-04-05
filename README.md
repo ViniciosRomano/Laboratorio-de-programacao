@@ -1,3 +1,2 @@
 # Laborat-rio-de-programacao
-Visualg
-Java
+Visualg, Java
