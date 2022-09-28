@@ -1,7 +1,8 @@
+
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Main {
+public class NameConvertForLibrary {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String nomeINN;
@@ -18,6 +19,6 @@ public class Main {
             nomeOUT = nomeOUT + nomes[i].charAt(0)+". ";
         }
         System.out.println("NomeINN: "+nomeINN);
-        System.out.println("NomeOut: "+nomeOUT);
+        System.out.println("NomeOut: "+nomeOUT.trim());
     }
 }
