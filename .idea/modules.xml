@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/JavaCodes/Aula1/Aula1.iml" filepath="$PROJECT_DIR$/JavaCodes/Aula1/Aula1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaCodes/Aula2/Aula2.iml" filepath="$PROJECT_DIR$/JavaCodes/Aula2/Aula2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaCodes/Aula3/Aula3.iml" filepath="$PROJECT_DIR$/JavaCodes/Aula3/Aula3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaCodes/Aula4/Aula4.iml" filepath="$PROJECT_DIR$/JavaCodes/Aula4/Aula4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaCodes/Aula5/Aula5.iml" filepath="$PROJECT_DIR$/JavaCodes/Aula5/Aula5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaCodes/Aula6/Aula6.iml" filepath="$PROJECT_DIR$/JavaCodes/Aula6/Aula6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaCodes/Aula7/Aula7.iml" filepath="$PROJECT_DIR$/JavaCodes/Aula7/Aula7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaCodes/JavaCodes.iml" filepath="$PROJECT_DIR$/JavaCodes/JavaCodes.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Laboratorio-de-programacao.iml" filepath="$PROJECT_DIR$/.idea/Laboratorio-de-programacao.iml" />
     </modules>
   </component>

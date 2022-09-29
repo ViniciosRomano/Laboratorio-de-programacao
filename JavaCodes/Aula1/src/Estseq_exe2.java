@@ -13,7 +13,7 @@ public class Estseq_exe2 {
         B = entrada.nextFloat();
 
         media = (A + B)/2;
-        System.out.println("Sua media é " + media);
+        System.out.println("Sua media e " + media);
         entrada.close();       
     }
 }

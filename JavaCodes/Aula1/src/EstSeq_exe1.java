@@ -1,9 +1,7 @@
-package Aula1;
 import java.util.Scanner;
-// psvm
-public class EstSeq_exe1{
-    public static void main(String[] args) 
-    {
+
+public class EstSeq_exe1 {
+    public static void main(String[] args) {
         int A, B, C,soma;
         Scanner teclado;
         teclado = new Scanner(System.in);
