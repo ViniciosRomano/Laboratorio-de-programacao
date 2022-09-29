@@ -16,7 +16,7 @@ public class Java2 {
 		if (A<B & B<C) {
 			System.out.println(A + "<" + B + "<" + C);
 		}
-		else if (A<C & ) {
+		else if (A<C & B<C) {
 			System.out.println(A + "<" + B + "<" + C);
 		}
 	}
