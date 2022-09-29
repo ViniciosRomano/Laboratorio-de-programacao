@@ -5,7 +5,6 @@ public class Ex2 {
     public static final int TRABALHADORES = 5;
     public static final double SAL_MIN = 1212.0;
     public static final double SAL_MAX = 3636.0;
-    public static final int
     public static void main(String[] args) {
         int i, id, idMAIOR, idmenor, turno ,trabDiurno, trabNoturno;
         double Salario,sal_MAIOR, sal_menor, folha, folhaDiurno, folhaNoturna;
@@ -35,7 +34,7 @@ public class Ex2 {
 
             System.out.println("Informe seu turno de trabalho da"+ i +" pessoa");
             turno = input.nextInt();
-            }while (turno != 1 && );
+            }while (turno != 1 );
 
             folha = folha + Salario;
 
