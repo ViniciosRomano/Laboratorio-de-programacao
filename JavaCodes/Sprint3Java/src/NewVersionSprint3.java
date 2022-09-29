@@ -14,9 +14,13 @@ public class NewVersionSprint3 {
                 System.out.print("Numero da "+(i+1) +" equipe: ");
                 ID = input.nextInt();
                 continuar =false;
+                if (ID<11 || ID>99){
+                    System.out.println("Falso ID (11-99)");
+                }
                 for (j=0;j< results.length;j++){
                     if (ID==results[j][0]){
                         continuar = true;
+                        System.out.println("Digite outro ID usuario ja existente");
                     }
                 }
             }while (ID<11 || ID>99||continuar);
@@ -33,6 +37,9 @@ public class NewVersionSprint3 {
             do {
             System.out.print("\nQual a nota do design do robo: ");
             results[i][2]= input.nextInt();
+            if (results[i][2]<0|| results[i][2]>10){
+                System.out.println("Digite uma nota entre 0 e 10");
+            }
             }while (results[i][2]<0|| results[i][2]>10);
 
             total = ponts[0] + ponts[1];
