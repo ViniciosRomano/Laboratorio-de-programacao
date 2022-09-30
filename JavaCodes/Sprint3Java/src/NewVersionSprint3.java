@@ -68,10 +68,10 @@ public class NewVersionSprint3 {
             System.out.print((i+1) + " lugar\t\t\t");
             for (j = 0; j < 3; j++) {
                 if (results[i][j] == results[i][0]) {
-                    System.out.print(results[i][j] + " \t\t");
+                    System.out.print(results[i][j] + "\t\t\t");
                 }
                 if (results[i][j] == results[i][1]){
-                    System.out.print(results[i][1] + "\t\t\t\t\t");
+                    System.out.print(results[i][1] + "\t\t\t\t");
                 }
                 if (results[i][j] == results[i][2]){
                     System.out.print(results[i][2]+"\n");
