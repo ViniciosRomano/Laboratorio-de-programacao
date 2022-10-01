@@ -18,9 +18,13 @@ public class NewVersionSprint3 {
                     System.out.println("Falso ID (11-99)");
                 }
                 for (j=0;j< results.length;j++){
-                    if (ID==results[j][0]){
-                        continuar = true;
-                        System.out.println("Digite outro ID usuario ja existente");
+                    if (ID==0){
+                    }
+                    else {
+                        if (ID==results[j][0]){
+                            continuar = true;
+                            System.out.println("Digite outro ID usuario ja existente");
+                        }
                     }
                 }
             }while (ID<11 || ID>99||continuar);
@@ -64,19 +68,12 @@ public class NewVersionSprint3 {
             }
 
         System.out.println("Classificacao\tCodigo\t Pontuacao\tNota Design");
-        for (i=0;i< equipes;i++) {
-            System.out.print((i+1) + " lugar\t\t\t");
-            for (j = 0; j < 3; j++) {
-                if (results[i][j] == results[i][0]) {
-                    System.out.print(results[i][j] + "\t\t\t");
-                }
-                if (results[i][j] == results[i][1]){
-                    System.out.print(results[i][1] + "\t\t\t\t");
-                }
-                if (results[i][j] == results[i][2]){
-                    System.out.print(results[i][2]+"\n");
-                }
-            }
+        for (i=0;i<equipes;i++) {
+            System.out.print((i+1) + " lugar\t\t\t  ");
+            System.out.print(results[i][0] + "\t\t\t");
+            System.out.print(results[i][1] + "\t\t\t");
+            System.out.print(results[i][2]);
+            System.out.println();
         }
        }
     }
