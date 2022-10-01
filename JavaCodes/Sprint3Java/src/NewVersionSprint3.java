@@ -18,14 +18,10 @@ public class NewVersionSprint3 {
                     System.out.println("Falso ID (11-99)");
                 }
                 for (j=0;j< results.length;j++){
-                    if (ID==0){
-                    }
-                    else {
-                        if (ID==results[j][0]){
+                        if (ID==results[j][0] && ID!=0){
                             continuar = true;
                             System.out.println("Digite outro ID usuario ja existente");
                         }
-                    }
                 }
             }while (ID<11 || ID>99||continuar);
             results[i][0] = ID;
