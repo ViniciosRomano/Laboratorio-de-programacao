@@ -46,8 +46,7 @@ public class NewVersionSprint3 {
             }
             }while (results[i][2]<0|| results[i][2]>10);
 
-            total = ponts[0] + ponts[1];
-            results[i][1] = total;
+            results[i][1] = ponts[0] + ponts[1];
             }
             for (i = 1; i < results.length; i++) {
                 for (j = 0; j < results.length; j++) {
