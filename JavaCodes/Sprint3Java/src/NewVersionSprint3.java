@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class NewVersionSprint3 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int equipes,i,j,total,ID;
+        int equipes,i,j,ID;
         System.out.print("Digite o numero de equipes: ");
         equipes = input.nextInt();
         int [][] results = new int [equipes][3];
