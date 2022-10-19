@@ -6,11 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="SamuApplication" />
         <module name="JavaCodes" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="JavaCodes" target="19" />
+      <module name="ApplicationSamu" target="18" />
+      <module name="JavaCodes" target="18" />
+      <module name="SamuApplication" target="18" />
     </bytecodeTargetLevel>
   </component>
 </project>
