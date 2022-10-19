@@ -15,7 +15,7 @@
       <module name="JavaCodes" target="18" />
       <module name="Samu" target="18" />
       <module name="SamuAplication" target="18" />
-      <module name="SamuApplication" target="18" />
+      <module name="SamuApplication" target="19" />
     </bytecodeTargetLevel>
   </component>
 </project>

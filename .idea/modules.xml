@@ -5,7 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/JavaCodes/All Files IC/All Files IC.iml" filepath="$PROJECT_DIR$/JavaCodes/All Files IC/All Files IC.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaCodes/All Files IC/ApiVision/ApiVision.iml" filepath="$PROJECT_DIR$/JavaCodes/All Files IC/ApiVision/ApiVision.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaCodes/All Files IC/ApiVisionFile/ApiVisionFile.iml" filepath="$PROJECT_DIR$/JavaCodes/All Files IC/ApiVisionFile/ApiVisionFile.iml" />
-      <module fileurl="file://$PROJECT_DIR$/JavaCodes/All Files IC/Application/Application.iml" filepath="$PROJECT_DIR$/JavaCodes/All Files IC/Application/Application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaCodes/All Files IC/ApplicationSamu/ApplicationSamu.iml" filepath="$PROJECT_DIR$/JavaCodes/All Files IC/ApplicationSamu/ApplicationSamu.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaCodes/Aula1/Aula1.iml" filepath="$PROJECT_DIR$/JavaCodes/Aula1/Aula1.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaCodes/Aula2/Aula2.iml" filepath="$PROJECT_DIR$/JavaCodes/Aula2/Aula2.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaCodes/Aula3/Aula3.iml" filepath="$PROJECT_DIR$/JavaCodes/Aula3/Aula3.iml" />
@@ -28,6 +28,7 @@
       <module fileurl="file://$PROJECT_DIR$/JavaCodes/String0921/String0921.iml" filepath="$PROJECT_DIR$/JavaCodes/String0921/String0921.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaCodes/String0928/String0928.iml" filepath="$PROJECT_DIR$/JavaCodes/String0928/String0928.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaCodes/Vetores/Vetores.iml" filepath="$PROJECT_DIR$/JavaCodes/Vetores/Vetores.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaCodes/All Files IC/untitled/untitled.iml" filepath="$PROJECT_DIR$/JavaCodes/All Files IC/untitled/untitled.iml" />
     </modules>
   </component>
 </project>

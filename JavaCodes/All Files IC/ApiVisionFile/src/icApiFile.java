@@ -29,7 +29,7 @@ public class icApiFile {
 
 
                     // Request body
-                    File file = new File("C:\\Users\\logonrmlocal\\Downloads\\58652-orig-1.jpg");
+                    File file = new File("C:\\Users\\zExtr\\Desktop\\Exibir\\Ulcera99%.png");
                     FileEntity reqEntity = new FileEntity(file);
                     request.setEntity(reqEntity);
 
