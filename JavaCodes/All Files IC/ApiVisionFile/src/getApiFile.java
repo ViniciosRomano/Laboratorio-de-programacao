@@ -50,7 +50,7 @@ public class getApiFile {
                 return allResult;
     }
 
-    public static String filter(){
+    public static String filterResult(){
         String finalResult = "";
 
         DecimalFormat df = new DecimalFormat("#.##%");
