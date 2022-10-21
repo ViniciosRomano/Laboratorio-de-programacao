@@ -1,10 +1,12 @@
 import java.io.IOException;
+import java.math.RoundingMode;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpResponse;
 import java.net.http.HttpRequest;
 import java.time.Duration;
 import org.json.*;
+import java.text.DecimalFormat;
 
 public class apirestList {
     public static final String URL_GET = "https://ikhha3ijx9.execute-api.us-east-1.amazonaws.com/dev/getSensors";
@@ -29,6 +31,8 @@ public class apirestList {
         return StringAPI;
     }
     public static String temperatureResult() throws IOException, InterruptedException {
+        DecimalFormat df = new DecimalFormat("#.##%");
+        df.setRoundingMode(RoundingMode.DOWN);
         String jsonString = apirestList.result() ;
         JSONObject obj = new JSONObject(jsonString);
 
@@ -47,7 +51,6 @@ public class apirestList {
     public static String frequencyResult() throws IOException, InterruptedException {
         String jsonString = apirestList.result() ;
         JSONObject obj = new JSONObject(jsonString);
-
         String frequency  = obj.getJSONObject("device_data").getString("frequency");
         return frequency;
     }

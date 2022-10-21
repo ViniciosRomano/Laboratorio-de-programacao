@@ -30,7 +30,7 @@ public class getApiFile {
                     request.setHeader("Prediction-key", "75ab507a8d6e43d5a6ff7eeb17c522e1");
 
 
-                    File file = new File("C:\\Users\\zExtr\\Desktop\\Exibir\\Queimadura99%.jpg");
+                    File file = new File("C:\\Users\\zExtr\\Desktop\\Exibir\\Tuberculose.jpg");
                     FileEntity reqEntity = new FileEntity(file);
                     request.setEntity(reqEntity);
 
