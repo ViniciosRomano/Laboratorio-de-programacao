@@ -7,9 +7,6 @@ import java.io.IOException;
 
 import javafx.application.Application;
 import javafx.embed.swing.SwingFXUtils;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import javafx.stage.Stage;
 
@@ -17,6 +14,9 @@ import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.videoio.VideoCapture;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.image.ImageView;
 
 public class CameraSnapshotJavaFX extends Application {
     Mat matrix = null;
@@ -31,29 +31,29 @@ public class CameraSnapshotJavaFX extends Application {
         obj.saveImage();
 
         // Setting the image view
-        ImageView imageView = new ImageView(writableImage);
+        //ImageView imageView = new ImageView(writableImage);
 
-        // setting the fit height and width of the image view
-        imageView.setFitHeight(400);
-        imageView.setFitWidth(600);
+        // setting the fit height and width of the image view só vizualizaçao
+        //imageView.setFitHeight(720);
+        //imageView.setFitWidth(1280);
 
         // Setting the preserve ratio of the image view
-        imageView.setPreserveRatio(true);
+        //imageView.setPreserveRatio(true);
 
         // Creating a Group object
-        Group root = new Group(imageView);
+        //Group root = new Group(imageView);
 
-        // Creating a scene object
-        Scene scene = new Scene(root, 600, 400);
+        // Creating a scene object tamanho da aba
+        //Scene scene = new Scene(root, 1280, 720);
 
         // Setting title to the Stage
-        stage.setTitle("Capturing an image");
+       // stage.setTitle("Capturing an image");
 
         // Adding scene to the stage
-        stage.setScene(scene);
+        //stage.setScene(scene);
 
         // Displaying the contents of the stage
-        stage.show();
+        //stage.show(); Abre a aba quando fecha desativa a camera..........................
     }
     public WritableImage capureSnapShot() {
         WritableImage WritableImage = null;
@@ -73,8 +73,7 @@ public class CameraSnapshotJavaFX extends Application {
             // If there is next video frame
             if (capture.read(matrix)) {
                 // Creating BuffredImage from the matrix
-                BufferedImage image = new BufferedImage(matrix.width(),
-                        matrix.height(), BufferedImage.TYPE_3BYTE_BGR);
+                BufferedImage image = new BufferedImage(matrix.width(),matrix.height(), BufferedImage.TYPE_3BYTE_BGR);
 
                 WritableRaster raster = image.getRaster();
                 DataBufferByte dataBuffer = (DataBufferByte) raster.getDataBuffer();

@@ -1,3 +1,5 @@
+package application;
+
 import java.io.IOException;
 import java.math.RoundingMode;
 import java.net.URI;
@@ -37,6 +39,7 @@ public class apirestList {
         JSONObject obj = new JSONObject(jsonString);
 
         String temperature  = obj.getJSONObject("device_data").getString("temperature");
+        temperature = temperature.substring(0, temperature.length()-3);
         return temperature;
     }
 
@@ -45,6 +48,7 @@ public class apirestList {
         JSONObject obj = new JSONObject(jsonString);
 
         String oximeter  = obj.getJSONObject("device_data").getString("oximeter");
+        oximeter = oximeter.substring(0, oximeter.length()-3);
         return oximeter;
     }
 
@@ -52,6 +56,7 @@ public class apirestList {
         String jsonString = apirestList.result() ;
         JSONObject obj = new JSONObject(jsonString);
         String frequency  = obj.getJSONObject("device_data").getString("frequency");
+        frequency = frequency.substring(0, frequency.length()-3);
         return frequency;
     }
 

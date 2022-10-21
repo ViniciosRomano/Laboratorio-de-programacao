@@ -1,5 +1,6 @@
 package application;
 
+import javafx.scene.image.WritableImage;
 import org.opencv.core.Core;
 
 import javafx.application.Application;
@@ -10,11 +11,13 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.fxml.FXMLLoader;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public class Main extends Application
 {
-	
 	@Override
-	public void start(Stage primaryStage)
+	public void start(Stage primaryStage) throws FileNotFoundException, IOException
 	{
 		try
 		{
@@ -31,7 +34,7 @@ public class Main extends Application
 			primaryStage.setScene(scene);
 			// show the GUI
 			primaryStage.show();
-			
+
 			// set the proper behavior on closing the application
 			FXController controller = loader.getController();
 			primaryStage.setOnCloseRequest((new EventHandler<WindowEvent>() {
@@ -45,13 +48,15 @@ public class Main extends Application
 		{
 			e.printStackTrace();
 		}
+
 	}
-	
+
+
 	public static void main(String[] args)
 	{
 		// load the native OpenCV library
 		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-		
+
 		launch(args);
 	}
 }

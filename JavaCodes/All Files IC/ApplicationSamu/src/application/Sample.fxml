@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #323232;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FXController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #323232;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FXController">
    <right>
       <ImageView fx:id="currentFrame" fitHeight="521.0" fitWidth="810.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="TOP_RIGHT">
          <image>
@@ -23,52 +23,7 @@
    <bottom>
       <Pane prefHeight="200.0" prefWidth="823.0" BorderPane.alignment="CENTER">
          <children>
-            <Pane layoutX="983.0" layoutY="27.0" prefHeight="155.0" prefWidth="156.0" style="-fx-background-color: #000; -fx-background-radius: 100;">
-               <children>
-                  <Button alignment="CENTER" layoutX="49.0" layoutY="21.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="41.0" rotate="-90.0" style="-fx-background-color: #000; -fx-background-radius: 20;" textAlignment="CENTER">
-                     <graphic>
-                        <ImageView fitHeight="55.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@seta-branca-arrow.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button layoutX="14.0" layoutY="59.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="41.0" style="-fx-background-color: #000; -fx-background-radius: 20;">
-                     <graphic>
-                        <ImageView fitHeight="55.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
-                           <image>
-                              <Image url="@seta-branca-arrow.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button layoutX="49.0" layoutY="93.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="41.0" style="-fx-background-color: #000; -fx-background-radius: 20;">
-                     <graphic>
-                        <ImageView fitHeight="55.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
-                           <image>
-                              <Image url="@seta-branca-arrow.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button layoutX="84.0" layoutY="59.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="41.0" style="-fx-background-color: #000; -fx-background-radius: 20;">
-                     <graphic>
-                        <ImageView fitHeight="55.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@seta-branca-arrow.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </Pane>
-            <Button layoutX="614.0" layoutY="45.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="171.0" style="-fx-background-color: #000; -fx-background-radius: 20;" text="Ativar Laser" textFill="WHITE">
-               <font>
-                  <Font name="Verdana" size="20.0" />
-               </font>
-            </Button>
-            <Button fx:id="button" layoutX="614.0" layoutY="115.0" mnemonicParsing="false" onAction="#startCamera" style="-fx-background-color: #000; -fx-background-radius: 20;" text="Ativar Camera" textFill="WHITE">
+            <Button fx:id="button" layoutX="771.0" layoutY="90.0" mnemonicParsing="false" onAction="#startCamera" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #000; -fx-background-radius: 20;" text="Ativar Camera" textFill="WHITE">
                <font>
                   <Font name="Verdana" size="20.0" />
                </font>
@@ -80,7 +35,7 @@
                         <Font name="Verdana" size="19.0" />
                      </font>
                   </Text>
-                  <Text fill="WHITE" layoutX="135.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="39">
+                  <Text fx:id="temperatura" fill="WHITE" layoutX="135.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="39">
                      <font>
                         <Font name="Verdana" size="83.0" />
                      </font>
@@ -98,11 +53,6 @@
    <left>
       <Pane prefHeight="719.0" prefWidth="364.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="220.0" fitWidth="425.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@image-2.png" />
-               </image>
-            </ImageView>
             <Pane layoutY="249.0" prefHeight="220.0" prefWidth="377.0" style="-fx-background-color: #000;">
                <children>
                   <Text fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SpO2">
@@ -115,7 +65,7 @@
                         <Font name="Verdana" size="19.0" />
                      </font>
                   </Text>
-                  <Text fill="WHITE" layoutX="26.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="86">
+                  <Text fx:id="ox" fill="WHITE" layoutX="26.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="86">
                      <font>
                         <Font name="Verdana" size="83.0" />
                      </font>
@@ -125,9 +75,18 @@
                         <Font name="Verdana" size="28.0" />
                      </font>
                   </Text>
-                  <Text fill="WHITE" layoutX="196.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="112">
+                  <Text fx:id="bpm" fill="WHITE" layoutX="196.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="112">
                      <font>
                         <Font name="Verdana" size="83.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane prefHeight="220.0" prefWidth="377.0" style="-fx-background-color: #9b9b9b;">
+               <children>
+                  <Text fx:id="analise" layoutX="79.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" textAlignment="CENTER" wrappingWidth="219.13671875">
+                     <font>
+                        <Font name="Verdana" size="20.0" />
                      </font>
                   </Text>
                </children>

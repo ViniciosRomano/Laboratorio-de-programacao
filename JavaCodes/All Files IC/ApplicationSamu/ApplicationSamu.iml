@@ -94,5 +94,15 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="apache.httpcomponents.httpclient" level="application" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../json-20220924.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
