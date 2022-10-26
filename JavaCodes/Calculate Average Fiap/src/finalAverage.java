@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 
 public class finalAverage {
-    public static final int MATERIAS = 7;
+    public static final int MATERIAS = 1;
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String [] names = new String[MATERIAS];
