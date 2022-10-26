@@ -24,7 +24,7 @@ public class getApiFile {
                 allResult = "";
                 try
                 {
-                    URIBuilder builder = new URIBuilder("https://desenvolvimento-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/0cae8647-5e8f-4b3e-8293-31191a0c3c3c/classify/iterations/Iteration4/image");
+                    URIBuilder builder = new URIBuilder("https://desenvolvimento-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/0cae8647-5e8f-4b3e-8293-31191a0c3c3c/classify/iterations/Iteration9/image");
 
                     URI uri = builder.build();
                     HttpPost request = new HttpPost(uri);
@@ -57,7 +57,7 @@ public class getApiFile {
 
         DecimalFormat df = new DecimalFormat("#.##%");
         df.setRoundingMode(RoundingMode.DOWN);
-        String allResult []= new String[4];
+        String allResult []= new String[5];
 
         String jsonString = getApiFile.result();
         JSONObject obj = new JSONObject(jsonString);

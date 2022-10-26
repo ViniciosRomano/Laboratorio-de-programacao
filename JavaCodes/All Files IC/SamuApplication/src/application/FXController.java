@@ -1,27 +1,23 @@
 package application;
 
-import java.awt.image.BufferedImage;
-import java.awt.image.DataBufferByte;
-import java.awt.image.WritableRaster;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
-
-import javafx.embed.swing.SwingFXUtils;
-import javafx.scene.image.WritableImage;
-import org.opencv.core.Mat;
-import org.opencv.imgcodecs.Imgcodecs;
-import org.opencv.videoio.VideoCapture;
-
 import application.utils.Utils;
-import javafx.event.ActionEvent;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
+import org.opencv.core.Mat;
+import org.opencv.imgcodecs.Imgcodecs;
+import org.opencv.videoio.VideoCapture;
 
+import java.awt.image.BufferedImage;
+import java.awt.image.DataBufferByte;
+import java.awt.image.WritableRaster;
 import java.io.IOException;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 
 public class FXController
@@ -42,54 +38,42 @@ public class FXController
 	
 	
 	private ScheduledExecutorService timer;
-	private VideoCapture capture = new VideoCapture(cameraId);
+	private final VideoCapture capture = new VideoCapture(cameraId);
 	private boolean cameraActive = false;
-	private static String cameraId = "rtsp://10.65.0.102:554/onvif1";
+	private static final int cameraId = 0;
 
-	public static final String URL_GET = "https://ikhha3ijx9.execute-api.us-east-1.amazonaws.com/dev/getSensors";
-	public static String StringAPI;
+//	public static final String URL_GET = "https://ikhha3ijx9.execute-api.us-east-1.amazonaws.com/dev/getSensors";
+//	public static String StringAPI;
 
 
 	@FXML
-	protected void startCamera(ActionEvent event)throws IOException, InterruptedException
-	{
+	protected void startCamera() throws IOException, InterruptedException {
 		if (!this.cameraActive)
 		{
-			// start the video capture
 			this.capture.open(cameraId);
-			
-			// is the video stream available?
+
 			if (this.capture.isOpened())
 			{
-				//capture cam
-				FXController obj = new FXController();
-				WritableImage writableImage = obj.capureSnapShot();
-				obj.saveImage();
-				//apiAnalise
-				this.analise.setText(getApiFile.filterResult());
-				//apiDados
 
-//				System.out.println(apirestList.temperatureResult());
-//				System.out.println(apirestList.oximeterResult());
-//				System.out.println(apirestList.frequencyResult());
-//				this.temperatura.setText(apirestList.temperatureResult());
-//				this.ox.setText(apirestList.oximeterResult());
-//				this.bpm.setText(apirestList.frequencyResult());
+				FXController printScreen = new FXController();
+				printScreen.capureSnapShot();
+				printScreen.saveImage();
+
+
+				this.analise.setText(getApiFile.filterResult());
+				this.temperatura.setText(apirestList.temperatureResult());
+				this.ox.setText(apirestList.oximeterResult());
+				this.bpm.setText(apirestList.frequencyResult());
 
 
 				this.cameraActive = true;
 
-				Runnable frameGrabber = new Runnable() {
-					
-					@Override
-					public void run()
-					{
-						Mat frame = grabFrame();
-						Image imageToShow = Utils.mat2Image(frame);
-						updateImageView(currentFrame, imageToShow);
-					}
+				Runnable frameGrabber = () -> {
+					Mat frame = grabFrame();
+					Image imageToShow = Utils.mat2Image(frame);
+					updateImageView(currentFrame, imageToShow);
 				};
-				
+
 				this.timer = Executors.newSingleThreadScheduledExecutor();
 				this.timer.scheduleAtFixedRate(frameGrabber, 0, 33, TimeUnit.MILLISECONDS);
 				this.button.setText("Desligar Camera");
@@ -103,7 +87,6 @@ public class FXController
 		{
 			this.cameraActive = false;
 			this.button.setText("Ligar Camera");
-
 			this.stopAcquisition();
 		}
 	}
@@ -164,12 +147,10 @@ public class FXController
 	}
 
 	//print
-	public WritableImage capureSnapShot() {
-		WritableImage WritableImage = null;
-		VideoCapture capture = new VideoCapture(cameraId);
+	public void capureSnapShot() {
+		//VideoCapture capture = new VideoCapture(cameraId); create erro
 		// Reading the next video frame from the camera
 		Mat matrix = new Mat();
-		capture.read(matrix);
 
 		// If camera is opened
 		if( capture.isOpened()) {
@@ -185,19 +166,18 @@ public class FXController
 				this.matrix = matrix;
 
 				// Creating the Writable Image
-				WritableImage = SwingFXUtils.toFXImage(image, null);
+				SwingFXUtils.toFXImage(image, null);
 			}
 		}
-		return WritableImage;
 	}
 	public void saveImage() {
 		// Saving the Image
-		String file = "C:\\Users\\zExtr\\IdeaProjects\\Laboratorio-de-programacao\\JavaCodes\\All Files IC\\ApplicationSamu\\images\\sanpshot.jpg";
+		String file = "C:\\Users\\zExtr\\IdeaProjects\\Laboratorio-de-programacao\\JavaCodes\\All Files IC\\SamuApplication\\images\\sanpshot.jpg";
 
 		// Instantiating the imgcodecs class
-		Imgcodecs imageCodecs = new Imgcodecs();
+		new Imgcodecs();
 
 		// Saving it again
-		imageCodecs.imwrite(file, matrix);
+		Imgcodecs.imwrite(file, matrix);
 	}
 }

@@ -1,3 +1,5 @@
+package application;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -30,7 +32,7 @@ public class getApiFile {
                     request.setHeader("Prediction-key", "75ab507a8d6e43d5a6ff7eeb17c522e1");
 
 
-                    File file = new File("C:\\Users\\zExtr\\IdeaProjects\\Laboratorio-de-programacao\\JavaCodes\\All Files IC\\ApplicationSamu\\images\\sanpshot.jpg");
+                    File file = new File("C:\\Users\\zExtr\\IdeaProjects\\Laboratorio-de-programacao\\JavaCodes\\All Files IC\\SamuApplication\\images\\sanpshot.jpg");
                     FileEntity reqEntity = new FileEntity(file);
                     request.setEntity(reqEntity);
 
@@ -55,7 +57,7 @@ public class getApiFile {
 
         DecimalFormat df = new DecimalFormat("#.##%");
         df.setRoundingMode(RoundingMode.DOWN);
-        String allResult []= new String[5];
+        String[] allResult = new String[5];
 
         String jsonString = getApiFile.result();
         JSONObject obj = new JSONObject(jsonString);
